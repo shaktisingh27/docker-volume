@@ -1,0 +1,12 @@
+we use named volumes for storage and if docker is remoced or shut down then data still persist 
+
+we us named volume as such 
+
+in docker run command we add flaf for it
+ -v <name of folder that we want in our systmem>:<relative path n docker file for that >
+
+ eg docker run -d -p 3000:80 --rm --name feedback-app -v feedback:/app/feedback feedback-node:volumes
+
+ docker volume ls to list all volumes
+ docker volume rn <volume name> to remove volumes
+ docker volume prune to remove all volumes that are not being used by containers

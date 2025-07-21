@@ -10,6 +10,6 @@ COPY . .
 
 EXPOSE 80
 
-VOLUME [ "/app/feedback" ]
+# VOLUME [ "/app/feedback" ] not needed in case of named volume/ for anonyus volume it is neede
 
 CMD [ "node", "server.js" ]
