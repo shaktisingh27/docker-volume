@@ -10,3 +10,12 @@ in docker run command we add flaf for it
  docker volume ls to list all volumes
  docker volume rn <volume name> to remove volumes
  docker volume prune to remove all volumes that are not being used by containers
+
+ Docker bind mount is same as named volume type but here we specify local project folder and folder in docker app
+
+ -v $(pwd):/app
+  then use use anonymous volume through terminal or through docker file to save nodemodules to be over rien by binding process as local 
+  files over rides the docker container file so causes error for node modules 
+
+  either
+  VOLUMES["/app/node_modules"] image need to be created again orr -v /app/node_modules anonmous volume if not want to create image again
